@@ -1,0 +1,54 @@
+O Processamento de Linguagem Natural (PLN) ou Natural Language Processing (NLP, em inglês) é uma subárea da Inteligência Artificial que visa ensinar as máquinas a entenderem nossa linguagem, ou seja, passar nossa forma de comunicar para uma forma que as máquinas consigam assimilar.
+
+Apesar de parecer uma tarefa bem complexa, o avanço do poder computacional e das ferramentas disponibilizadas tornou mais "fácil" a criação de aplicações na área. Dentre essas ferramentas, podemos citar a NLTK, uma biblioteca da linguagem de programação Python.
+
+Mas será que só este lado computacional já é o suficiente? E o entendimento linguístico? A seguir irei mostrar que o conhecimento básico da linguística é essencial, seja para construir um chatbot ou realizar um projeto de análise de sentimentos.
+Níveis de Conhecimento ou Pirâmide de NLP
+
+As abordagens linguísticas dentro do NLP podem ser divididas em tarefas ou níveis de conhecimento, representadas por uma pirâmide. O topo mostra as tarefas de maior dificuldade para ensinar à máquina e a base as de menor dificuldade, como pode ser visto na figura a seguir:
+Figura com fundo branco. Na parte esquerda da figura temos o desenho de uma pirâmide dividida em 5 níveis, contendo palavras escritas em cada um deles. De baixo para cima temos os níveis: Fonologia/Fonética, Morfologia, Sintaxe, Semântica e Pragmática. Na direita da figura temos o desenho de uma seta, do mesmo tamanho da pirâmide, apontando para cima. Ao lado da seta, no canto inferior direito, temos o sinal de negativo. Na parte central à direita da seta temos a palavra complexidade. No canto superior à direita da seta temos o sinal de positivo.
+
+Vamos começar a explicar a pirâmide de baixo para cima, trazendo exemplos das tarefas a serem realizadas em NLP em cada um deles, deixando claro que nosso foco serão os níveis Morfologia, Sintaxe e Semântica.
+Fonologia e Fonética
+
+Nesta primeira abordagem temos como objetivo, resumidamente, ensinar como as palavras de uma língua são faladas e ouvidas (sons produzidos). Este trabalho envolve, principalmente, a transformação de áudio para texto ou até o reconhecimento de voz. Apesar de estar na base, a fonética e a fonologia tem um trabalho conjunto com todos os outros níveis, tornando-se uma abordagem complexa, de certa forma.
+Morfologia
+
+A morfologia preocupa-se com a estrutura das palavras, como elas são formadas e classificadas. Por exemplo:
+
+Estudaram → o morfema (menor unidade que apresenta significado) é o aram, indicando o número (plural) e o tempo (pretérito perfeito do indicativo) do verbo.
+
+Algumas tarefas de NLP feitas neste nível são:
+
+    Lemmatization (lematização).
+    Stemming (ou stemização).
+
+Para conhecer melhor sobre e ver na prática estas atividades, indico a leitura do artigo Lemmatization vs. stemming: quando usar cada uma?
+Sintaxe
+
+Assim como a morfologia, a sintaxe também estuda a estrutura das palavras, só que em sua composição em uma sentença. De forma bem simples, em formato de uma pequena árvore sintática, temos o seguinte exemplo:
+Figura com fundo branco contendo a frase “Os alunos estudaram até tarde.” na parte superior. As palavras “os alunos” têm cor cinza claro e “estudaram até tarde” tem cor cinza escuro. Na parte central da imagem temos dois ícones em formato de quadrado preenchidos com a cor azul e com as bordas na cor preta, cada um contendo uma seta branca apontando na diagonal para baixo, sendo um quadrado mais à esquerda e outro mais à direita. Na parte inferior da figura temos as palavras “sujeito” e “predicado”. O ícone mais à esquerda está abaixo das palavras “os alunos” e aponta para a palavra sujeito. Já o ícone mais à direita está abaixo das palavras “estudaram até tarde” e aponta para a palavra predicado.
+
+Neste nível de conhecimento, podemos analisar:
+
+    Árvores de sintaxe e dependência.
+    Rótulos de palavras (verbo, artigo, advérbio, adjetivo, etc.), dentro de determinada frase ou oração.
+
+Semântica
+
+Na área da Linguística, a semântica busca estudar o significado das palavras, de acordo com o contexto inserido. Esse nível é fundamental (e um pouco mais complexo) em NLP, por envolver o entendimento real da linguagem. Então, ensinar para a máquina quando identificar o significado da palavra em certa sentença demanda mais dados e estudos.
+
+Considerando a frase: "Eu vi uma manga caída no chão." A palavra manga se refere à fruta ou a uma parte da roupa?
+
+Esse exemplo mostra justamente uma palavra que possui diferentes significados de acordo com o contexto. Aqui podemos supor que seja uma fruta que caiu da árvore. Mas como podemos passar essa informação para a máquina?
+
+Além disso, outras questões como ironia e diferenças culturais, também refletem nos significados de cada termo, levando a uma etapa ainda mais complexa na hora de extrair valor destes tipos de dados.
+
+No nível da semântica, as tarefas de NLP realizadas são:
+
+    Reconhecimento de entidades nomeadas.
+    Extração de relação semântica.
+
+Pragmática
+
+No último nível, temos a pragmática, campo da linguística em que estuda a língua em uso, ou seja, a linguagem em seu contexto comunicacional, seja escrita, falada ou sinalizada.
