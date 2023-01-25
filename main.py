@@ -1,22 +1,65 @@
-from package.tokenize import tokenize_word,split_only_words, normalize_tokens
+
 from package.freq_ import freq_disk, prob
-
-with open("artigos.txt", "r") as f:
-    artigos = f.read()
-
-len(artigos)
-
-tokenize_ = tokenize_word(artigos)
-print(tokenize_)
-slip = split_only_words(tokenize_)
-print(slip)
-nr = normalize_tokens(slip)
-
-lp = freq_disk(nr)
-print(lp)
-
-total = len(nr)
-print(total)
-lp = prob('e', total, nr)
+from package.sqlpointer import select_data
+from package.tokenize import split_only_words, normalize_tokens, tokenize_word, model_pt
+import pandas as pd
+import nltk
 
 
+# allwordtext = []
+# all = []
+rows = select_data(1)
+place = rows[0][0]
+about = rows[0][2]
+
+href = rows[0][3]
+
+text = tokenize_word(about)
+text_ = split_only_words(text)
+text_2 = normalize_tokens(text_)
+Togged = model_pt(about)
+print(Togged)
+
+# rows = select_data(1)
+# place = rows[0][0]
+# about = rows[0][2]
+# href = rows[0][3]
+
+#         #  tokenize_text1 = tokenize_word(href)
+#          nextext = []
+
+#          for i in href:
+#             dict = {
+#               i['href'] : tokenize_word(i['text'])
+#             }
+#             nextext.append(dict)
+
+#          allwordtextabout = []
+
+
+#          dict = {
+#              "place" : place,
+#              "about" : about,
+#              "token" : tokenize_,
+#              "text1" : href,
+#              "tokenize" : nextext
+#           }
+
+#          all.append(dict)
+
+# #         all.append(dict)
+# #         for i in tokenize_:
+# #             allwordtext.append(i)
+
+# df = pd.DataFrame.from_records(all)
+
+# df.to_csv('place.csv')
+# # for i in df:
+# #     print(i)
+# # # nr = normalize_tokens(allwordtext)
+# # # sp = split_only_words(nr)
+# # # freq = freq_disk(sp)
+
+# # # from package.wordcloud import wordcloud
+
+# # # wordcloud(allwordtext)

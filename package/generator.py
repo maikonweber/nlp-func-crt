@@ -125,8 +125,6 @@ def gerador_palavras(palavra):
     return palavras_geradas
 
 
-
-
 def novo_corretor(palavra):
     palavras_geradas = gerador_palavras(palavra)
     palavra_correta = max(palavras_geradas, key=probabilidade)
