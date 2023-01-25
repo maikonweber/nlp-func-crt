@@ -1,5 +1,5 @@
 import numpy as np  
-import sklearn.feature.extraction.text import CountVectorizer
+from sklearn.feature_extraction.text import CountVectorizer
 
 def fun_bigrama(fonte, comparar, n): 
     counts = CountVectorizer(analyzer='word', ngram_range=(n, n))

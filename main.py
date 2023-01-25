@@ -1,7 +1,8 @@
 
 from package.freq_ import freq_disk, prob
 from package.sqlpointer import select_data
-from package.tokenize import split_only_words, normalize_tokens, tokenize_word, model_pt
+from package.fn_bigrma import fun_bigrama, containtiment
+from package.tokenize import split_only_words, normalize_tokens, tokenize_word, model_pt, bi_gram
 import pandas as pd
 import nltk
 
@@ -18,7 +19,8 @@ text = tokenize_word(about)
 text_ = split_only_words(text)
 text_2 = normalize_tokens(text_)
 Togged = model_pt(about)
-print(Togged)
+bi = fun_bigrama(about, about, 2)
+print(print)
 
 # rows = select_data(1)
 # place = rows[0][0]
